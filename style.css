@@ -1,136 +1,163 @@
 * {
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Container to center everything */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
-    max-width: 1440px;
-    margin: 0 auto;
+    padding: 20px 30px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
+/* Logo Text */
 .logo-text a {
-    color: black;
+    color: #333;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Center the topnav menu items */
+/* Topnav (Navigation Menu) */
 .topnav {
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-radius: 10%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* Change color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Highlight the active page */
-.topnav a.active {
-    background-color: #000000;
-    color: white;
-}
-
-/* Hide the menu icon initially */
-.topnav .icon {
-    display: none;
-}
-
-/* Container for hero section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    height: 100vh;
-}
-
-/* Styling for text on the left */
-.hero .left {
-    flex: 1;
-    padding: 20px;
-}
-
-.hero .left p {
-    text-align: left;
-}
-
-#welcome {
-    font-size: 85px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-#self {
-    font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-.button {
-    width: 153px;
-    height: 56px;
-    color: rgb(255, 255, 255);
-    background-color: #000000;
-    text-align: center;
+    color: #333;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     border-radius: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.3s;
 }
 
-#button1 {
-    font-size: 20px;
+.topnav a:hover {
+    background-color: #ddd;
 }
 
-/* Styling for the image on the right */
+.topnav a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Menu Icon */
+.topnav .icon {
+    display: none;
+    font-size: 28px;
+}
+
+/* Button Style */
+.button {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px; /* To account for fixed header */
+}
+
+.hero .left {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
 .hero .right {
     flex: 1;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-.right #right-img {
-    max-width: 60%;
+.hero img {
+    max-width: 80%;
     height: auto;
+    border-radius: 10px;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
+    /* Stack the hero section */
     .hero {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero .right {
-        margin-top: 20px;
+    .hero img {
+        max-width: 70%;
     }
 
-    .topnav a:not(:first-child) {
+    /* Adjust topnav for small screens */
+    .topnav {
         display: none;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .topnav a.icon {
-        float: right;
+    .topnav.responsive {
+        display: flex;
+    }
+
+    .topnav a {
+        text-align: center;
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    .topnav .icon {
         display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+/* Small screens and mobile adjustments */
+@media screen and (max-width: 440px) {
+    #welcome {
+        font-size: 32px;
+    }
+
+    .hero .left p {
+        font-size: 18px;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 20px;
     }
 }

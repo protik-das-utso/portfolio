@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <div class="header" id="myTopnav">
+    <header class="header" id="myTopnav">
         <div class="logo-text">
             <a href="#">Personal</a>
         </div>
-        <div class="topnav">
+        <nav class="topnav">
             <a href="#home" class="active">Home</a>
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
@@ -22,37 +20,30 @@
             <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
             </a>
-        </div>
-        <div>
-            <button class="button">Resume <span style="font-weight: 900;">&#10515;</span></button>
-        </div>
-    </div>
+        </nav>
+        <button class="button">Resume <span style="font-weight: 900;">&#10515;</span></button>
+    </header>
+
     <div class="container">
-        <div class="hero">
+        <section class="hero">
             <div class="left">
-                <p id="welcome" style="font-size: 20px;">Hello I’am <span style="font-weight: 900;">PROTIK DAS
-                        UTSO.</span></p>
-                <p><span style="font-weight: 900;">Frontend</span><span>Developer</span></p>
+                <p id="welcome" style="font-size: 6vw";>Hello I’m<br><span style="font-size: 5vw; font-weight: 900; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PROTIK DAS UTSO.</span></p>
+                <p><span style="font-weight: 900;">Frontend</span> Developer</p>
                 <p>Based in Bangladesh</p>
-                <p id="self">About myself - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, accusamus?
-                </p>
-                <br><br>
-                <div>
-                    <button class="button" id="button1">Hire ME</button>
-                </div>
+                <p id="self">About myself - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, accusamus?</p>
+                <button class="button" id="button1">Hire ME</button>
             </div>
             <div class="right">
-                <img src="./hero-img.png" id="right-img" alt="">
+                <img src="./img/hero-img.png" alt="Hero Image">
             </div>
-        </div>
+        </section>
     </div>
+
     <script>
         function toggleMenu() {
             var nav = document.getElementById("myTopnav");
             nav.classList.toggle("responsive");
         }
     </script>
-    <script src="./scripts.js"></script>
 </body>
-
 </html>
