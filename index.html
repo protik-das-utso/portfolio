@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="header" id="myTopnav">
+        <div class="logo-text">
+            <a href="#">Personal</a>
+        </div>
+        <div class="topnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div>
+            <button class="button">Resume <span style="font-weight: 900;">&#10515;</span></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hero">
+            <div class="left">
+                <p id="welcome" style="font-size: 20px;">Hello I’am <span style="font-weight: 900;">PROTIK DAS
+                        UTSO.</span></p>
+                <p><span style="font-weight: 900;">Frontend</span><span>Developer</span></p>
+                <p>Based in Bangladesh</p>
+                <p id="self">About myself - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, accusamus?
+                </p>
+                <br><br>
+                <div>
+                    <button class="button" id="button1">Hire ME</button>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./hero-img.png" id="right-img" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("myTopnav");
+            nav.classList.toggle("responsive");
+        }
+    </script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
