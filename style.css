@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+}
+h2{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    border-bottom: 1px solid green;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-div {
+    background-color: azure;
+    height: 70px;
+    width: 100%;
+    box-shadow: 2px 2px 10px rgb(150, 202, 134);
+    
+}
+
+.head-ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.head-list {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: rgb(147, 201, 142);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.head-list a{
+    text-decoration: none;
+}
+
+.head-list:hover {
+    background-color: rgb(67, 223, 119);
+}
+
+/* Details */
+
+.details {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: wrap-reverse row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.name p {
+    font-size: 20px;
+}
+
+.img img {
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(150, 202, 134);
+}
+
+.img img:hover {
+    scale: 1.05;
+    transition: 0.4s ease-in-out;
+}
+
+/* About */
+.about, .education, .project, .hobbies{
+    border: 2px solid red;
+    margin-top: 20px;
+}
+
+.about-flex {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    gap: 10px;
+     align-items: center;
+}
+
+.about-img img {
+    max-width: 20rem;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 20px;
+    max-width: 450px;
+}
+
+.about-text p {
+    font-size: 20px;
+    text-align-last: auto;
+    text-align: justify;
+}
+
+.about .hello {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Education */
+
+.education-flex{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+.education-left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/* Projects */
+.project-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.card{
+    border: 2px solid black;
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+.card img{
+    width: 100%;
+}
+.card-titile{
+    text-align: center;
+}
+.card-des{
+    text-align: justify;
+}
+.card button{
+    padding: 5px 10px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #d6a82a;
+    color: aliceblue;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: rgb(61, 125, 180);
+    color: black;
+}
+
+/* Hobbies */
+.hobbies ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.hobby-list{
+    list-style: none;
+}
+
+/* Footer */
+
+#copyright {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(231, 233, 233);
+    padding: 8px;
+}
